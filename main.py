@@ -6,6 +6,8 @@ from kivymd.app import MDApp
 
 class EarningCalcApp(MDApp):
     def build(self):
+        self.theme_cls.primary_palette = "BlueGray"
+        self.theme_cls.accent_palette = "LightBlue" 
         self.theme_cls.material_style = "M3"
 
         return Builder.load_file("ec.kv")

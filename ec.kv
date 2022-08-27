@@ -10,44 +10,226 @@ MDScreen:
             text: 'Home'
             icon: 'home-circle'
 
-            MDLabel:
-                text: 'Earning Calc & Reporting App'
-                halign: 'center'
-                font_style: 'H3'
+            MDCard:
+                size_hint: 0.65, 0.75
+                focus_behavior: True
+                pos_hint: {"center_x": .5, "center_y": .5} 
+
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: 1, 1, 1, 1
+                    
+                    MDLabel:
+                        text: 'Earning Calculator' 
+                        halign: 'center'
+                        font_style: 'H2'
+                        theme_text_color: 'Custom'
+                        text_color: 0.3, 0.01, 0.22, 1
+                    
+                    MDLabel:
+                        text: '&'
+                        halign: 'center'
+                        font_style: 'H3'
+                        theme_text_color: 'Custom'
+                        text_color: 0.25, 0.46, 0.63, 1
+                    
+                    MDLabel:
+                        text: 'Reporting App' 
+                        halign: 'center'
+                        font_style: 'H4'
+                        theme_text_color: 'Custom'
+                        text_color: 0.3, 0.01, 0.22, 1
+
 
         MDBottomNavigationItem:
             name: 'screen 2'
             text: 'Settings'
             icon: 'application-settings'
             
+            MDCard:
+                size_hint: 0.9, 0.8
+                focus_behavior: True
+                pos_hint: {"center_x": .5, "center_y": .5} 
 
-            MDLabel:
-                text: 'Settings'
-                halign: 'center'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: 1, 1, 1, 1
+                    spacing: 5
+                    
+                    MDTopAppBar:
+                        title: "User Settings"
+
+                    MDTextField:
+                        id: name_input 
+                        multiline: False 
+                        hint_text: "Your Name/Company Name"
+                        required: True 
+                    
+                    MDTextField:
+                        id: email_input 
+                        multiline: False 
+                        hint_text: "somename@example.com"
+                        required: True 
+                    
+                    MDTextField:
+                        id: sales_tax_input 
+                        multiline: False 
+                        hint_text: "Enter Sales Tax: 0.075 or 7.5"
+                        required: True 
+                    
+                    MDTextField:
+                        id: shop_percent_input  
+                        multiline: False 
+                        hint_text: "Percent of Sale Owed Shop: 0.4 or 40"
+                        required: True 
+                    
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        md_bg_color: 1, 1, 1, 1
+                        spacing: 10
+                        
+                        MDFillRoundFlatIconButton:
+                            icon: "bookmark-plus-outline"
+                            text: "Save User Info"
+                            #on_release: 
+                        
+                        MDFillRoundFlatIconButton:
+                            icon: 'delete' 
+                            text: 'Clear User Info'
+                            #on_release: 
 
         MDBottomNavigationItem:
             name: 'screen 3'
             text: 'Add Expense'
             icon: 'cash-plus'
 
-            MDLabel:
-                text: 'Add Expense'
-                halign: 'center'
+            MDCard:
+                size_hint: 0.85, 0.75
+                focus_behavior: True
+                pos_hint: {"center_x": .5, "center_y": .5} 
+
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: 1, 1, 1, 1
+                    spacing: 10 
+
+                    MDTopAppBar:
+                        title: "Add Expense"
+
+                    MDTextField:
+                        id: exp_name 
+                        multiline: False 
+                        hint_text: "Expense Name/Description"
+                        required: True 
+                    
+                    MDTextField:
+                        id: exp_cost
+                        multiline: False 
+                        hint_text: "Expense Cost"
+                        required: True 
+                    
+                    MDTextField:
+                        id: exp_quantity 
+                        multiline: False 
+                        hint_text: "Quantity or individual units purchased"
+                        required: True 
+                    
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        md_bg_color: 1, 1, 1, 1
+                        spacing: 10
+                    
+                        MDFillRoundFlatIconButton:
+                            icon: "bookmark-plus-outline"
+                            text: "Save Expense"
+                            #on_release: 
         
         MDBottomNavigationItem:
             name: 'screen 4'
             text: 'Add Sale'
             icon: 'point-of-sale'
 
-            MDLabel:
-                text: 'Add Sale'
-                halign: 'center'
+            MDCard:
+                size_hint: 0.85, 0.75
+                focus_behavior: True
+                pos_hint: {"center_x": .5, "center_y": .5} 
+                
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: 1, 1, 1, 1
+                    spacing: 10 
+                   
+                    MDTopAppBar:
+                        title: "Add New Sale"
+
+                    MDTextField:
+                        id: sale_name  
+                        multiline: False 
+                        hint_text: "Sale Name/Description"
+                        required: True 
+                    
+                    MDTextField:
+                        id: amt_charged
+                        multiline: False 
+                        hint_text: "Enter Amount Charged $"
+                        required: True 
+                    
+                    MDTextField:
+                        id: amt_deposit
+                        multiline: False 
+                        hint_text: "Enter Deposit Amount" 
+                    
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        md_bg_color: 1, 1, 1, 1
+                        spacing: 10
+                    
+                        MDFillRoundFlatIconButton:
+                            icon: "bookmark-plus-outline"
+                            text: "Save Sale Info"
+                            #on_release: 
         
         MDBottomNavigationItem:
             name: 'screen 5'
             text: 'Earning Report'
             icon: 'file-plus-outline'
 
-            MDLabel:
-                text: 'Earning Report'
-                halign: 'center'
+            MDCard:
+                size_hint: 0.85, 0.75
+                focus_behavior: True
+                pos_hint: {"center_x": .5, "center_y": .5} 
+                
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    md_bg_color: 1, 1, 1, 1
+                    spacing: 10 
+                    
+                    MDTopAppBar:
+                        title: "Generate a Report"
+
+                    MDTextField:
+                        id: _start_date 
+                        multiline: False 
+                        hint_text: "Enter Start Date: YYYY-MM-DD"
+                        required: True 
+                    
+                    MDTextField:
+                        id: _end_date
+                        multiline: False 
+                        hint_text: "Enter End Date: YYYY-MM-DD"
+                        required: True 
+                    
+                    MDBoxLayout:
+                        orientation: 'horizontal'
+                        md_bg_color: 1, 1, 1, 1
+                        spacing: 10
+                        
+                        MDFillRoundFlatIconButton:
+                            icon: "file-plus"
+                            text: "Generate Report"
+                            #on_release: 
+                        
+                        MDFillRoundFlatIconButton:
+                            icon: "delete"
+                            text: "Clear Start/End Dates"
+                            #on_release:
