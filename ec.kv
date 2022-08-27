@@ -91,12 +91,12 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "bookmark-plus-outline"
                             text: "Save User Info"
-                            #on_release: 
+                            on_release: app.save_user_info() 
                         
                         MDFillRoundFlatIconButton:
                             icon: 'delete' 
                             text: 'Clear User Info'
-                            #on_release: 
+                            on_release: app.clear_settings() 
 
         MDBottomNavigationItem:
             name: 'screen 3'
@@ -142,7 +142,7 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "bookmark-plus-outline"
                             text: "Save Expense"
-                            #on_release: 
+                            on_release: app.exp_save()
         
         MDBottomNavigationItem:
             name: 'screen 4'
@@ -187,7 +187,7 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "bookmark-plus-outline"
                             text: "Save Sale Info"
-                            #on_release: 
+                            on_release: app.sale_info_save() 
         
         MDBottomNavigationItem:
             name: 'screen 5'
@@ -227,9 +227,9 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "file-plus"
                             text: "Generate Report"
-                            #on_release: 
+                            on_release: app.generate_report()
                         
                         MDFillRoundFlatIconButton:
                             icon: "delete"
                             text: "Clear Start/End Dates"
-                            #on_release:
+                            on_release: app.clear_dates()
