@@ -1,10 +1,11 @@
 #:kivy 2.1.0 
 
+
 MDScreen:
 
     MDBottomNavigation:
         text_color_active: 0, 0, 0, 1
-        panel_color: 0.89, 0.93, 0.98, 1
+        panel_color: 0.39, 0.71, 0.96, 0.5
 
         MDBottomNavigationItem:
             name: 'screen 1'
@@ -71,13 +72,13 @@ MDScreen:
                         multiline: False 
                         hint_text: "somename@example.com"
                         required: True 
-                    
+                        
                     MDTextField:
                         id: sales_tax_input 
                         multiline: False 
                         hint_text: "Enter Sales Tax: 0.075 or 7.5"
                         required: True 
-                    
+                        
                     MDTextField:
                         id: shop_percent_input  
                         multiline: False 
