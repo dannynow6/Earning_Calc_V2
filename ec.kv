@@ -5,7 +5,7 @@ MDScreen:
 
     MDBottomNavigation:
         text_color_active: 0, 0, 0, 1
-        panel_color: 0.6, 0.67, 0.71, 1
+        panel_color: 0.87, 0.89, 0.93, 1
 
         MDBottomNavigationItem:
             name: 'screen 1'
@@ -60,6 +60,7 @@ MDScreen:
                     
                     MDTopAppBar:
                         title: "User Settings"
+                        md_bg_color: 0.55, 0.62, 0.76, 1
 
                     MDTextField:
                         id: name_input 
@@ -93,11 +94,13 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "bookmark-plus-outline"
                             text: "Save User Info"
+                            md_bg_color: 0.23, 0.35, 0.6, 1
                             on_release: app.save_user_info() 
                         
                         MDFillRoundFlatIconButton:
                             icon: 'delete' 
                             text: 'Clear User Info'
+                            md_bg_color: 0.23, 0.35, 0.6, 1
                             on_release: app.clear_settings() 
 
         MDBottomNavigationItem:
@@ -117,6 +120,7 @@ MDScreen:
 
                     MDTopAppBar:
                         title: "Add Expense"
+                        md_bg_color: 0.55, 0.62, 0.76, 1
 
                     MDTextField:
                         id: exp_name 
@@ -144,6 +148,7 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "bookmark-plus-outline"
                             text: "Save Expense"
+                            md_bg_color: 0.23, 0.35, 0.6, 1
                             on_release: app.exp_save()
         
         MDBottomNavigationItem:
@@ -163,6 +168,7 @@ MDScreen:
                    
                     MDTopAppBar:
                         title: "Add New Sale"
+                        md_bg_color: 0.55, 0.62, 0.76, 1
 
                     MDTextField:
                         id: sale_name  
@@ -189,6 +195,7 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "bookmark-plus-outline"
                             text: "Save Sale Info"
+                            md_bg_color: 0.23, 0.35, 0.6, 1
                             on_release: app.sale_info_save() 
         
         MDBottomNavigationItem:
@@ -208,6 +215,7 @@ MDScreen:
                     
                     MDTopAppBar:
                         title: "Generate a Report"
+                        md_bg_color: 0.55, 0.62, 0.76, 1
 
                     MDTextField:
                         id: _start_date 
@@ -229,9 +237,11 @@ MDScreen:
                         MDFillRoundFlatIconButton:
                             icon: "file-plus"
                             text: "Generate Report"
+                            md_bg_color: 0.23, 0.35, 0.6, 1
                             on_release: app.generate_report()
                         
                         MDFillRoundFlatIconButton:
                             icon: "delete"
                             text: "Clear Start/End Dates"
+                            md_bg_color: 0.23, 0.35, 0.6, 1
                             on_release: app.clear_dates()
